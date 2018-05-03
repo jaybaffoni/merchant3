@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="becustomapps.com.merchant3.Activities.MainMenuActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+    <include layout="@layout/header"/>
+
+    <TextClock
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/newServiceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="15dp"
+        android:textSize="18sp"
+        style="@style/AppTheme.Button"
+        android:text="Services"
+        android:onClick="services"/>
+
+    <Button
+        android:id="@+id/orderChangeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="15dp"
+        android:textSize="18sp"
+        style="@style/AppTheme.Button"
+        android:text="Order Change"
+        android:onClick="orderChange"/>
+
+    <Button
+        android:id="@+id/transmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="15dp"
+        android:textSize="18sp"
+        style="@style/AppTheme.Button"
+        android:text="Transmit"
+        android:onClick="transmit"/>
+</LinearLayout>

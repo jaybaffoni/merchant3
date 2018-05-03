@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:descendantFocusability="afterDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:descendantFocusability="afterDescendants">
+
+        <TextView
+            android:id="@+id/prod_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="012345"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/cust_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="01234567"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/index"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="101 of 102"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:gravity="right"
+            android:focusable="false"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/prod_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THIS IS THE PRODUCT NAME"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:focusable="false"/>
+
+    <TextView
+        android:id="@+id/shipment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:descendantFocusability="afterDescendants">
+
+        <EditText
+            android:id="@+id/onhandEntry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="OH"
+            style="@style/AppTheme.EntryBox"
+            android:inputType="number"
+            android:nextFocusDown="@id/notsoldEntry"
+            />
+
+        <EditText
+            android:id="@+id/notsoldEntry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="NS"
+            style="@style/AppTheme.EntryBox"
+            android:inputType="number"
+            android:nextFocusDown="@id/markdownEntry"/>
+
+        <EditText
+            android:id="@+id/markdownEntry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="MD"
+            style="@style/AppTheme.EntryBox"
+            android:inputType="number"
+            android:nextFocusDown="@id/mdretailEntry"/>
+
+        <Button
+            android:id="@+id/adjustButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            style="@style/AppTheme.EntryButton"
+            android:focusable="false"/>
+
+        <EditText
+            android:id="@+id/mdretailEntry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="MDR"
+            style="@style/AppTheme.EntryBox"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@id/chargeEntry"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:descendantFocusability="afterDescendants">
+
+        <TextView
+            android:id="@+id/onhandText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="On Hand"
+            style="@style/AppTheme.LabelText"
+            />
+        <TextView
+            android:id="@+id/onhandText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Not Sold"
+            style="@style/AppTheme.LabelText"
+            />
+        <TextView
+            android:id="@+id/onhandText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mark Down"
+            style="@style/AppTheme.LabelText"
+            />
+        <TextView
+            android:id="@+id/onhandText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Adjust"
+            style="@style/AppTheme.LabelText"
+            />
+        <TextView
+            android:id="@+id/onhandText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MD Retail"
+            style="@style/AppTheme.LabelText"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/expandableAdjustments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:descendantFocusability="afterDescendants">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adjustments"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:focusable="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/chargeEntry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="CH"
+                style="@style/AppTheme.AdjustBox"
+                android:nextFocusDown="@id/shortEntry"/>
+
+            <EditText
+                android:id="@+id/shortEntry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="SH"
+                style="@style/AppTheme.AdjustBox"
+                android:nextFocusDown="@id/damagedEntry"/>
+
+            <EditText
+                android:id="@+id/damagedEntry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="DM"
+                style="@style/AppTheme.AdjustBox"
+                android:nextFocusDown="@id/crippleEntry"/>
+
+            <EditText
+                android:id="@+id/crippleEntry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="CR"
+                style="@style/AppTheme.AdjustBox"
+                android:nextFocusDown="@id/transferEntry"/>
+
+            <EditText
+                android:id="@+id/transferEntry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="TR"
+                style="@style/AppTheme.AdjustBox"
+                android:nextFocusDown="@id/recallEntry"/>
+
+            <EditText
+                android:id="@+id/recallEntry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="RE"
+                style="@style/AppTheme.AdjustBox"
+                android:nextFocusDown="@id/onhandEntry"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:descendantFocusability="afterDescendants">
+
+            <TextView
+                android:id="@+id/onhandText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Charge"
+                style="@style/AppTheme.AdjustLabelText"
+                />
+            <TextView
+                android:id="@+id/onhandText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Short"
+                style="@style/AppTheme.AdjustLabelText"
+                />
+            <TextView
+                android:id="@+id/onhandText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Damaged"
+                style="@style/AppTheme.AdjustLabelText"
+                />
+            <TextView
+                android:id="@+id/onhandText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cripple"
+                style="@style/AppTheme.AdjustLabelText"
+                />
+            <TextView
+                android:id="@+id/onhandText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Transfer"
+                style="@style/AppTheme.AdjustLabelText"
+                />
+            <TextView
+                android:id="@+id/onhandText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Recall"
+                style="@style/AppTheme.AdjustLabelText"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/subColor"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+
+
+</LinearLayout>

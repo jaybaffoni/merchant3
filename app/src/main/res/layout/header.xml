@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <Button
+        android:id="@+id/backButton"
+        style="@style/AppTheme.HeaderButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Back"
+        android:onClick="back"
+        android:focusable="false"/>
+
+    <Button
+        android:id="@+id/middleButton"
+        style="@style/AppTheme.HeaderButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text=""
+        android:focusable="false"/>
+
+    <Button
+        android:id="@+id/helpButton"
+        style="@style/AppTheme.HeaderButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Help"
+        android:onClick="help"
+        android:focusable="false"/>
+</LinearLayout>

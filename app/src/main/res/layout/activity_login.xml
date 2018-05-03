@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="becustomapps.com.merchant3.Activities.LoginActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+    <include layout="@layout/header"/>
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Welcome!"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="18sp"
+        style="@style/AppTheme.Button"
+        android:onClick="loginPressed"
+        android:text="Log In"
+         />
+
+    <TextView
+        android:id="@+id/notText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/switchUserButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:onClick="switchUser"
+        android:text="Switch User"
+        android:textSize="18sp"
+        style="@style/AppTheme.Button"/>
+
+</LinearLayout>

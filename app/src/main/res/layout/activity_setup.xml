@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SetupActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+    <include layout="@layout/header"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Server Username"
+        android:inputType="textPersonName"
+        style="@style/AppTheme.EntryBox"/>
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Server Address"
+        android:inputType="textPersonName"
+        style="@style/AppTheme.EntryBox"/>
+
+    <EditText
+        android:id="@+id/port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Server Port"
+        android:inputType="number"
+        style="@style/AppTheme.EntryBox"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Server Password"
+        android:inputType="textPassword"
+        style="@style/AppTheme.EntryBox"/>
+
+    <Button
+        android:id="@+id/button"
+        style="@style/AppTheme.EntryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="saveSettings"
+        android:text="Save Settings" />
+
+
+</LinearLayout>
