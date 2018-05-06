@@ -34,7 +34,8 @@
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".Activities.SignatureActivity" />
         <activity android:name=".Activities.SetupActivity" />
-        <activity android:name=".Activities.OrderChangeMenuActivity"></activity>
+        <activity android:name=".Activities.OrderChangeMenuActivity" />
+        <activity android:name=".Activities.OrderChangeActivity"></activity>
     </application>
 
 </manifest>

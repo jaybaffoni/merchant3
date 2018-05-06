@@ -728,6 +728,20 @@ public class DataSource {
         return true;
     }
 
+    public OrderCustomer getOrderCustomerById(String cust_no){
+
+        String whereClause = DatabaseHelper.COLUMN_ORDERCUSTOMERACCT + " = ?";
+        String[] whereArgs = new String[] {
+                cust_no
+        };
+        //Log.e("CLAUSE", whereClause);
+        Cursor cursor = database.query(DatabaseHelper.TABLE_ORDERCUSTOMERS, orderCustomerColumns, whereClause, whereArgs,
+                null, null, null);
+        cursor.moveToFirst();
+        //Log.e("COUNT", cursor.getCount() + "");
+        return cursorToOrderCustomer(cursor);
+    }
+
     public boolean orderProductExists(String cust_no, String prod_no){
         String Query = "Select * from " + DatabaseHelper.TABLE_ORDERPRODUCTS + " where " + DatabaseHelper.COLUMN_ORDERPRODUCTCUSTNO + " = '" + cust_no + "' AND " + DatabaseHelper.COLUMN_ORDERPRODUCTPRODNO + " = '" + prod_no + "'";
         Cursor cursor = database.rawQuery(Query, null);
