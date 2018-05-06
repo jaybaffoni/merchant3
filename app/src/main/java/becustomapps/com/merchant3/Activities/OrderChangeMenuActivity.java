@@ -7,8 +7,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+import becustomapps.com.merchant3.Adapters.OrderCustomerAdapter;
+import becustomapps.com.merchant3.Objects.Customer;
+import becustomapps.com.merchant3.Objects.OrderCustomer;
 import becustomapps.com.merchant3.R;
 import becustomapps.com.merchant3.Utilities.DataSource;
 import becustomapps.com.merchant3.Utilities.LogOutTimerUtil;
@@ -18,6 +28,9 @@ public class OrderChangeMenuActivity extends AppCompatActivity implements LogOut
 
     SharedPreferences prefs;
     DataSource datasource;
+    List<OrderCustomer> orderCustomers;
+    HashMap<String, Customer> customerHashMap = new HashMap<String, Customer>();
+    OrderCustomerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +47,31 @@ public class OrderChangeMenuActivity extends AppCompatActivity implements LogOut
         datasource = new DataSource(this);
         datasource.open();
 
-        //ToDo get all order customers
-        //ToDo narrow to same 7s
-        //ToDo get all regular customers
-        //ToDo create map
+        List<OrderCustomer> allOrderCustomers = datasource.getAllOrderCustomers();
+        orderCustomers = new ArrayList<OrderCustomer>();
+
+        Collections.sort(allOrderCustomers);
+        String first7 = "";
+        for(OrderCustomer c: allOrderCustomers){
+            if (!c.getAcct().substring(0,7).equals(first7)){
+                orderCustomers.add(c);
+                first7 = c.getAcct().substring(0,7);
+            }
+        }
+        List<Customer> allCustomers = datasource.getAllCustomers();
+        for(Customer c: allCustomers){
+            customerHashMap.put(c.getCust_no(), c);
+        }
+
+        adapter = new OrderCustomerAdapter(this, orderCustomers, customerHashMap);
+        ListView lv = (ListView)findViewById(R.id.customer_list);
+        lv.setAdapter(adapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //ToDo
+            }
+        });
     }
 
     public void back(View view) {

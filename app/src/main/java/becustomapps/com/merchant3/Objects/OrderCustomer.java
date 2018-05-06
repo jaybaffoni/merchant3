@@ -4,7 +4,7 @@ package becustomapps.com.merchant3.Objects;
  * Created by Jay on 10/16/2017.
  */
 
-public class OrderCustomer {
+public class OrderCustomer implements Comparable<OrderCustomer>{
     private long id;
     private String acct;
     private String days;
@@ -94,4 +94,10 @@ public class OrderCustomer {
     public String toString(){
         return acct + "," + start + "," + end + "," + orderdate;
     }
+
+    @Override
+    public int compareTo(OrderCustomer another) {
+        return this.acct.compareTo(another.getAcct());
+    }
+
 }
