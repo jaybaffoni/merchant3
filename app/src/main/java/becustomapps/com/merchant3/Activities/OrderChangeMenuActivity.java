@@ -1,81 +1,47 @@
 package becustomapps.com.merchant3.Activities;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 
-import com.github.gcacace.signaturepad.views.SignaturePad;
-
-import java.util.List;
-
-import becustomapps.com.merchant3.Objects.Customer;
-import becustomapps.com.merchant3.Objects.Punch;
 import becustomapps.com.merchant3.R;
 import becustomapps.com.merchant3.Utilities.DataSource;
 import becustomapps.com.merchant3.Utilities.LogOutTimerUtil;
 import becustomapps.com.merchant3.Utilities.Transmittable;
-import becustomapps.com.merchant3.Utilities.Utility;
 
-public class MainMenuActivity extends AppCompatActivity implements Transmittable, LogOutTimerUtil.LogOutListener{
+public class OrderChangeMenuActivity extends AppCompatActivity implements LogOutTimerUtil.LogOutListener{
 
-    DataSource datasource;
     SharedPreferences prefs;
+    DataSource datasource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_order_change_menu);
 
-        getSupportActionBar().setTitle("Main Menu");
+        getSupportActionBar().setTitle("Order Change Customers");
 
-        Button exitButton = (Button)findViewById(R.id.backButton);
-        exitButton.setText("Log Out");
         Button blankButton = (Button)findViewById(R.id.middleButton);
         blankButton.setEnabled(false);
+
+        prefs = getSharedPreferences("prefs", Context.MODE_PRIVATE);
 
         datasource = new DataSource(this);
         datasource.open();
 
-        prefs = getSharedPreferences("prefs", Context.MODE_PRIVATE);
-
-        for(Customer c: datasource.getAllCustomers()){
-            Log.e("CUST_NO", c.getCust_no());
-        }
-    }
-
-    public void services(View view){
-        Intent intent = new Intent(this, ServicesActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void orderChange(View view){
-        Intent intent = new Intent(this, OrderChangeMenuActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void transmit(View view){
-        List<Punch> allPunches = datasource.getAllServicePunches();
-        for(Punch p: allPunches){
-            if(p.getTransmitted() == 0){
-                Utility.transmit(this, this, p, datasource, prefs);
-            }
-        }
+        //ToDo get all order customers
+        //ToDo narrow to same 7s
+        //ToDo get all regular customers
+        //ToDo create map
     }
 
     public void back(View view) {
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, MainMenuActivity.class);
         startActivity(intent);
         finish();
     }
@@ -120,8 +86,5 @@ public class MainMenuActivity extends AppCompatActivity implements Transmittable
         finish();
     }
 
-    @Override
-    public void onTransmitComplete(boolean leave) {
-        //Just stay here
-    }
+
 }
