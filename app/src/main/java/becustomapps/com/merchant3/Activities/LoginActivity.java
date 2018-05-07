@@ -1035,6 +1035,9 @@ public class LoginActivity extends AppCompatActivity {
                                         public void onClick(DialogInterface dialog,
                                                             int id) {
                                             dialog.cancel();
+                                            if(loader.isShowing()){
+                                                loader.dismiss();
+                                            }
                                         }
                                     });
                     alertDialog = alertDialogBuilder.create();
