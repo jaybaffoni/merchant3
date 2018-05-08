@@ -19,4 +19,8 @@
 
     <color name="blue">#0000FF</color>
     <color name="red">#FF0000</color>
+    <color name="yellow">#70ffe100</color>
+    <color name="transparentgrey">#858b8b8b</color>
+    <color name="softred">#ffafb1</color>
+    <color name="softblue">#b4beff</color>
 </resources>
