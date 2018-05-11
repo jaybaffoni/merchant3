@@ -130,7 +130,7 @@ public class AuthcodeAdapter extends RecyclerView.Adapter<AuthcodeAdapter.MyView
         if(shipmentMap.containsKey(ac.getProd_no())){
             holder.shipdata.setText(shipmentMap.get(ac.getProd_no()).toString());
         } else {
-            holder.shipdata.setText("");
+            holder.shipdata.setText("Ship Date: " + "N/A" + " - Qty: " + "N/A");
         }
 
         holder.onhand.setText(ac.getOnhand());

@@ -1,1530 +1,1244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.OrderChangeActivity"
-    android:orientation="vertical"
     android:background="@drawable/gradient_background">
 
-    <include layout="@layout/header"/>
-
     <LinearLayout
-        android:id="@+id/accountLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/softred">
-
-        <TextView
-            android:id="@+id/customerid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="02937250"
-            android:textSize="18sp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"/>
-
-        <TextView
-            android:id="@+id/spaceText1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text=""
-            android:textSize="18sp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"/>
-
-        <TextView
-            android:id="@+id/customername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="WAL MART 0492"
-            android:textSize="18sp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"/>
-
-        <TextView
-            android:id="@+id/customeraddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:text="650 KIMMEL RD VINCENNES IN"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/spaceText2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text=""
-            android:textSize="18sp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/softblue">
-
-        <TextView
-            android:id="@+id/productID"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="3366"
-            android:textSize="20sp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"/>
-
-        <TextView
-            android:id="@+id/productText"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="12 HALF LOAF WHITE BUNNY"
-            android:textSize="20sp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:gravity="right"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/clipboardLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
-
-            <TextView
-                android:id="@+id/blankText1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="15"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"/>
-
-            <TextView
-                android:id="@+id/dayOfWeek1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="Thu"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"
-                />
-
-            <TextView
-                android:id="@+id/dayOfWeek2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="Fri"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/dayOfWeek3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="Sat"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/dayOfWeek4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="Mon"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/dayOfWeek5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="Tue"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/dayOfWeek6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="Wed"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/dayOfWeek7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="Thu"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/blankText2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
+        <include layout="@layout/header"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/blankText3"
+                android:id="@+id/productID"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="15"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"/>
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
 
             <TextView
-                android:id="@+id/date1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="07-20"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/date2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="07-21"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/date3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="07-22"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/date4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="07-24"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/date5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="07-25"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/date6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="07-26"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/date7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="07-27"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/totalText"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="Total"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
+                android:id="@+id/productText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:background="@color/grey">
-
-            <TextView
-                android:id="@+id/OH"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="7"
-                android:background="#60FFFFFF"
-                android:text="OH 5"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="left"/>
-
-            <TextView
-                android:id="@+id/prevAdj"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="8"
-                android:background="#60FFFFFF"
-                android:text="Prev Adj"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="right"/>
-
-            <TextView
-                android:id="@+id/prevAdj1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="-2"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/prevAdj2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/prevAdj3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/prevAdj4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/prevAdj5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/prevAdj6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/prevAdj7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/prevAdjTotal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:background="@color/darkGrey">
-
-            <TextView
-                android:id="@+id/gam"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="7"
-                android:background="#60FFFFFF"
-                android:text="Gam 6"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="left"/>
-
-            <TextView
-                android:id="@+id/shipAdj"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="8"
-                android:background="#60FFFFFF"
-                android:text="Ship Adj"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="right"/>
-
-            <TextView
-                android:id="@+id/shipAdj1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/shipAdj2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/shipAdj3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/shipAdj4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/shipAdj5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/shipAdj6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/shipAdj7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/shipAdjTotal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:background="@color/grey">
-
-            <TextView
-                android:id="@+id/percent"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="7"
-                android:background="@color/yellow"
-                android:text="10%"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="left"
-                android:textColor="@color/red"/>
-
-            <TextView
-                android:id="@+id/tabAdj"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="8"
-                android:background="#60FFFFFF"
-                android:text="Tab Adj"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="right"/>
-
-            <TextView
-                android:id="@+id/tabAdj1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/tabAdj2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/tabAdj3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/tabAdj4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/tabAdj5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/tabAdj6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/tabAdj7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/tabAdjTotal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:background="@color/darkGrey">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/fac"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="7"
-                android:background="#60FFFFFF"
-                android:text="Fac 02"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="left"/>
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
 
             <TextView
-                android:id="@+id/avgSold"
+                android:id="@+id/OH"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="8"
-                android:background="#60FFFFFF"
-                android:text="Avg-Sold"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="right"/>
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
 
             <TextView
-                android:id="@+id/avgSold1"
+                android:id="@+id/gam"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="4"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
 
             <TextView
-                android:id="@+id/avgSold2"
+                android:id="@+id/percent"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="6"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/avgSold3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="13"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/avgSold4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="1"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/avgSold5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="1"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/avgSold6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="1"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/avgSold7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="1"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/avgSoldTotal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="27"
-                android:textSize="16sp" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
 
         </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="9">
+
+                <!-- Days of Week -->
+
+                <TextView
+                    android:id="@+id/blankText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/dayOfWeek1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thu"
+                    android:textSize="16sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/dayOfWeek2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fri"
+                    android:textSize="16sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/dayOfWeek3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sat"
+                    android:textSize="16sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/dayOfWeek4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mon"
+                    android:textSize="16sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/dayOfWeek5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tue"
+                    android:textSize="16sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/dayOfWeek6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wed"
+                    android:textSize="16sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/dayOfWeek7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thu"
+                    android:textSize="16sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/blankText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"/>
+
+                <!-- Dates -->
+
+                <TextView
+                    android:id="@+id/blankText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/date1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="7-20"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="7-21"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/date3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="7-22"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/date4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="7-24"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/date5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="7-25"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/date6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="7-26"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/date7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7-27"
+                    android:textSize="12sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/totalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tot."
+                    android:textSize="12sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"/>
+
+                <!-- Prev Adj -->
+
+                <TextView
+                    android:id="@+id/prevAdj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="Prev Adj"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/prevAdj1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="-2"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/prevAdj2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/prevAdj3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/prevAdj4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/prevAdj5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/prevAdj6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/prevAdj7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/prevAdjTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <!-- Ship Adj -->
+
+                <TextView
+                    android:id="@+id/shipAdj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="Ship Adj"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/shipAdj1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/shipAdj2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/shipAdj3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/shipAdj4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/shipAdj5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/shipAdj6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/shipAdj7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/shipAdjTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <!-- Tab Adj -->
+
+                <TextView
+                    android:id="@+id/tabAdj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="Tab Adj"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/tabAdj1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/tabAdj2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/tabAdj3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/tabAdj4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/tabAdj5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/tabAdj6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/tabAdj7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/tabAdjTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <!-- Avg Sold -->
+
+                <TextView
+                    android:id="@+id/avgSold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="Avg-Sold"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/avgSold1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="4"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/avgSold2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="6"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/avgSold3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="13"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/avgSold4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/avgSold5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/avgSold6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/avgSold7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/avgSoldTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="27"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <!-- Pre-Sold -->
+
+                <TextView
+                    android:id="@+id/preSold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Prev-Sold"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/preSold1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="4"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/preSold2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="5"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/preSold3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="15"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/preSold4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/preSold5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="7"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/preSold6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/preSold7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="7"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/preSoldTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="40"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <!-- Current Order -->
+
+                <TextView
+                    android:id="@+id/curOrd"
+                    style="@style/AppTheme.GridLayoutBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Curr. Ord" />
+
+                <TextView
+                    android:id="@+id/curOrd1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="3"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/curOrd2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="6"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/curOrd3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="14"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/curOrd4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/curOrd5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="8"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/curOrd6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/curOrd7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="8"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/curOrdTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="41"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <!-- Suggested Order -->
+
+                <TextView
+                    android:id="@+id/sugOrd"
+                    style="@style/AppTheme.GridLayoutBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Sug. Ord" />
+
+                <TextView
+                    android:id="@+id/sugOrd1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/sugOrd2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/sugOrd3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text=""
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/sugOrd4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/sugOrd5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text=""
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/sugOrd6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/sugOrd7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text=""
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/sugOrdTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <!-- Final Order -->
+
+                <TextView
+                    android:id="@+id/finalOrd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="Final Ord"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <EditText
+                    android:id="@+id/finalOrdEdit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginRight="2dp"
+                    android:imeOptions="actionNext"
+                    style="@style/AppTheme.GridLayoutBox">
+
+                </EditText>
+
+
+                <EditText
+                    android:id="@+id/finalOrdEdit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginRight="2dp"
+                    android:imeOptions="actionNext"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <EditText
+                    android:id="@+id/finalOrdEdit3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginRight="2dp"
+                    android:imeOptions="actionNext"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <EditText
+                    android:id="@+id/finalOrdEdit4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginRight="2dp"
+                    android:imeOptions="actionNext"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <EditText
+                    android:id="@+id/finalOrdEdit5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginRight="2dp"
+                    android:imeOptions="actionNext"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <EditText
+                    android:id="@+id/finalOrdEdit6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginRight="2dp"
+                    android:imeOptions="actionNext"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <EditText
+                    android:id="@+id/finalOrdEdit7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginRight="2dp"
+                    android:imeOptions="actionNext"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/finalOrdTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <!-- Locked -->
+
+                <TextView
+                    android:id="@+id/locked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text="LOCKED"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/locked1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/locked2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/locked3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/locked4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/locked5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/locked6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/locked7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+                <TextView
+                    android:id="@+id/lockedTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#60FFFFFF"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    style="@style/AppTheme.GridLayoutBox"/>
+
+            </GridLayout>
+
+        </HorizontalScrollView>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:background="@color/grey">
+            android:id="@+id/prevBackLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp" >
 
-            <TextView
-                android:id="@+id/preSold"
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="15"
-                android:background="#60FFFFFF"
-                android:gravity="right"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="Prev-Sold"
-                android:textSize="16sp" />
+                android:layout_weight="1"
+                android:src="@drawable/ic_prev"
+                android:onClick="priorProduct"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                style="@style/AppTheme.EntryButton"/>
 
-            <TextView
-                android:id="@+id/preSold1"
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="4"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
+                android:layout_weight="1"
+                android:src="@drawable/ic_view_all"
+                android:onClick="viewAll"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                style="@style/AppTheme.EntryButton"/>
 
-            <TextView
-                android:id="@+id/preSold2"
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="5"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
+                android:layout_weight="1"
+                android:src="@drawable/ic_cancel_product"
+                android:onClick="cancelProduct"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                style="@style/AppTheme.EntryButton"/>
 
-            <TextView
-                android:id="@+id/preSold3"
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="15"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/preSold4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="1"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/preSold5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="7"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/preSold6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="1"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/preSold7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="7"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/preSoldTotal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="40"
-                android:textSize="16sp" />
+                android:layout_weight="1"
+                android:src="@drawable/ic_next"
+                android:onClick="nextProduct"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                style="@style/AppTheme.EntryButton"/>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:background="@color/darkGrey">
-
-            <TextView
-                android:id="@+id/curOrd"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="15"
-                android:background="#60FFFFFF"
-                android:text="Current Ord"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="right"/>
-
-            <TextView
-                android:id="@+id/curOrd1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="3"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/curOrd2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="6"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/curOrd3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="14"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/curOrd4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="1"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/curOrd5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="8"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/curOrd6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="1"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/curOrd7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text="8"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/curOrdTotal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="41"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:background="@color/grey">
-
-            <TextView
-                android:id="@+id/sugOrd"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="15"
-                android:background="#60FFFFFF"
-                android:text="Suggested Ord"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="right"/>
-
-            <TextView
-                android:id="@+id/sugOrd1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/sugOrd2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/sugOrd3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text=""
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/sugOrd4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/sugOrd5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text=""
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/sugOrd6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/sugOrd7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text=""
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/sugOrdTotal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:background="@color/darkGrey">
-
-            <TextView
-                android:id="@+id/finalOrd"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="15"
-                android:background="#60FFFFFF"
-                android:text="Final Ord"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="right"
-                />
-
-            <TextView
-                android:id="@+id/finalOrdText1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <EditText
-                android:id="@+id/finalOrdEdit1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:inputType="number"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp"
-                android:visibility="gone"
-                android:layout_marginRight="2dp"
-                android:imeOptions="actionNext">
-
-
-
-            </EditText>
-
-            <TextView
-                android:id="@+id/finalOrdText2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <EditText
-                android:id="@+id/finalOrdEdit2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:inputType="number"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp"
-                android:visibility="gone"
-                android:layout_marginRight="2dp"
-                android:imeOptions="actionNext"/>
-
-            <TextView
-                android:id="@+id/finalOrdText3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <EditText
-                android:id="@+id/finalOrdEdit3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:inputType="number"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp"
-                android:visibility="gone"
-                android:layout_marginRight="2dp"
-                android:imeOptions="actionNext"/>
-
-            <TextView
-                android:id="@+id/finalOrdText4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <EditText
-                android:id="@+id/finalOrdEdit4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:inputType="number"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp"
-                android:visibility="gone"
-                android:layout_marginRight="2dp"
-                android:imeOptions="actionNext"/>
-
-            <TextView
-                android:id="@+id/finalOrdText5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <EditText
-                android:id="@+id/finalOrdEdit5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:inputType="number"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp"
-                android:visibility="gone"
-                android:layout_marginRight="2dp"
-                android:imeOptions="actionNext"/>
-
-            <TextView
-                android:id="@+id/finalOrdText6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <EditText
-                android:id="@+id/finalOrdEdit6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:inputType="number"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp"
-                android:visibility="gone"
-                android:layout_marginRight="2dp"
-                android:imeOptions="actionNext"/>
-
-            <TextView
-                android:id="@+id/finalOrdText7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <EditText
-                android:id="@+id/finalOrdEdit7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:inputType="number"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp"
-                android:visibility="gone"
-                android:layout_marginRight="2dp"
-                android:imeOptions="actionNext"/>
-
-            <TextView
-                android:id="@+id/finalOrdTotal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:background="@color/grey">
-
-            <TextView
-                android:id="@+id/locked"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="15"
-                android:background="#60FFFFFF"
-                android:text="LOCKED"
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="right"/>
-
-            <TextView
-                android:id="@+id/locked1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/locked2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/locked3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-            <TextView
-                android:id="@+id/locked4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/locked5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/locked6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/locked7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/lockedTotal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#60FFFFFF"
-                android:text=""
-                android:textSize="16sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/dummyEditText"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:inputType="number"
-            android:imeOptions="actionNext">
-
-
-
-        </EditText>
 
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

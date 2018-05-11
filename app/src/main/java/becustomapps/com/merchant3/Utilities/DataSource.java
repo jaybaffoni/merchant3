@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import becustomapps.com.merchant3.Objects.Authcode;
@@ -752,6 +753,46 @@ public class DataSource {
         }
         cursor.close();
         return true;
+    }
+
+    public ArrayList<OrderProduct> getOrderProductsFromAcct(String acct){
+        ArrayList<OrderProduct> sd = new ArrayList<OrderProduct>();
+        String whereClause = DatabaseHelper.COLUMN_ORDERPRODUCTCUSTNO + " LIKE ?";
+        String[] whereArgs = new String[] {
+                acct + "%"
+        };
+        //Log.e("CLAUSE", whereClause);
+        Cursor cursor = database.query(DatabaseHelper.TABLE_ORDERPRODUCTS, orderProductColumns, whereClause, whereArgs,
+                null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            OrderProduct s = cursorToOrderProduct(cursor);
+            sd.add(s);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        return sd;
+    }
+
+    public HashMap<String, Authcode> getProductsFromAcct(String acct){
+        HashMap<String, Authcode> sd = new HashMap<String, Authcode>();
+        String whereClause = DatabaseHelper.COLUMN_AUTH_CUST_NO + " LIKE ?";
+        String[] whereArgs = new String[] {
+                acct + "%"
+        };
+        //Log.e("CLAUSE", whereClause);
+        Cursor cursor = database.query(DatabaseHelper.TABLE_AUTHCODES, authcodeColumns, whereClause, whereArgs,
+                null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Authcode s = cursorToAuthcode(cursor);
+            sd.put(s.getProd_no(), s);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        return sd;
     }
 
     public void createPunch(Punch p) {

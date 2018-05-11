@@ -35,7 +35,10 @@
         <activity android:name=".Activities.SignatureActivity" />
         <activity android:name=".Activities.SetupActivity" />
         <activity android:name=".Activities.OrderChangeMenuActivity" />
-        <activity android:name=".Activities.OrderChangeActivity"></activity>
+        <activity
+            android:name=".Activities.OrderChangeActivity"
+            android:theme="@style/AppThemeWhite"
+            android:windowSoftInputMode="adjustResize"></activity>
     </application>
 
 </manifest>
